@@ -7,10 +7,27 @@ Volume ["/data"] is the mounting point for source code you wish to build. Normal
 Example:
 
     docker run --rm -ti -e UID=$UID -v /my/sources/project:/data mstormo/suse_cuda /bin/bash
-will mount /my/sources/project with my current user's permissions on SUSE xx w/CUDA xx
+will mount /my/sources/project with my current user's permissions on SUSE 11.3 w/CUDA 7.5
 
     docker run --rm -ti v /my/sources/project:/data mstormo/suse_cuda /bin/bash
-will mount /my/sources/project with root permissions on SUSE xx w/CUDA xx
+will mount /my/sources/project with root permissions on SUSE 11.3 w/CUDA 7.5
 
-    docker run --rm -ti -e UID=$UID -v /my/sources/project:/data mstormo/suse_cuda:11.3_4.2 /bin/bash
-will mount /my/sources/project with my current user's permissions on SUSE SP3 w/CUDA 4.2.
+    docker run --rm -ti -e UID=$UID -v /my/sources/project:/data mstormo/suse_cuda:11.3_5.5 /bin/bash
+will mount /my/sources/project with my current user's permissions on SUSE 11 SP3 w/CUDA 5.5.
+
+As CUDA <= 5.0 doesn't support GCC 4.7, those versions are not currently generated
+
+
+**Tag** / **compressed** / **local**
+
+**latest** / 875 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:latest.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:latest)
+
+11.3_7.5 / 875 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:11.3_7.5.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:11.3_7.5)
+
+11.3_7.0 / 841 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:11.3_7.0.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:11.3_7.0)
+
+11.3_6.5 / 706 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:11.3_6.5.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:11.3_6.5)
+
+11.3_6.0 / 770 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:11.3_6.0.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:11.3_6.0)
+
+11.3_5.5 / 599 MB / [![](https://badge.imagelayers.io/mstormo/suse_cuda:11.3_5.5.svg)](https://imagelayers.io/?images=mstormo/suse_cuda:11.3_5.5)
